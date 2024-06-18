@@ -15,14 +15,14 @@ public class Recensione {
 		} else {
 			throw new Exception("il nome utente non è valido");
 		}
-		if(numeroStelle>0&&numeroStelle<=5) {
+		if (numeroStelle > 0 && numeroStelle <= 5) {
 			this.numeroStelle = numeroStelle;
-		}else {
+		} else {
 			throw new Exception("numero stelle inserito non valido");
-			}
-		if(!testo.isBlank()) {
-		this.testo = testo;
-		}else {
+		}
+		if (!testo.isBlank()) {
+			this.testo = testo;
+		} else {
 			throw new Exception("il testo inserito non è valido");
 		}
 	}

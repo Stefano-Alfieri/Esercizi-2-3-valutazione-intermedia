@@ -31,7 +31,8 @@ public class MobileApp {
 
 	@Override
 	public String toString() {
-		return "MobileApp [nome=" + nome + ", ricavoTotale=" + ricavoTotale + " Valutazione Media= "+ valutazioneMedia()+ "]";
+		return "MobileApp [nome=" + nome + ", ricavoTotale=" + ricavoTotale + " Valutazione Media= "
+				+ valutazioneMedia() + "]";
 	}
 
 	public void download() {

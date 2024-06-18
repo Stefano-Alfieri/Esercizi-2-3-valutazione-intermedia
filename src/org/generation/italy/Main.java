@@ -5,7 +5,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-
 import org.generation.italy.model.MobileApp;
 import org.generation.italy.model.Recensione;
 
@@ -20,21 +19,21 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
 		DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-			try {
-				// inizio creazione app
-				System.out.println("Benvenuto in 'crea la tua app'");
-				System.out.println("inserisci il nome dell'app:");
-				nome = sc.nextLine();
-				System.out.println("inserisci il sistema operativo per il quale sarà disponible:");
-				sistemaOperativo = sc.nextLine();
-				System.out.println("inserisci il prezzo della tua App:");
-				prezzo = sc.nextFloat();
-				sc.nextLine();
-				// creazione oggetto
-				MobileApp app = new MobileApp(nome, sistemaOperativo, prezzo);
-				// inizio menu
-				System.out.println("Cosa vuoi fare?");
-				do {
+		try {
+			// inizio creazione app
+			System.out.println("Benvenuto in 'crea la tua app'");
+			System.out.println("inserisci il nome dell'app:");
+			nome = sc.nextLine();
+			System.out.println("inserisci il sistema operativo per il quale sarà disponible:");
+			sistemaOperativo = sc.nextLine();
+			System.out.println("inserisci il prezzo della tua App:");
+			prezzo = sc.nextFloat();
+			sc.nextLine();
+			// creazione oggetto
+			MobileApp app = new MobileApp(nome, sistemaOperativo, prezzo);
+			// inizio menu
+			System.out.println("Cosa vuoi fare?");
+			do {
 				System.out.println(
 						"(1)Download singolo, (2)Download Multiplo, (3)Inserisci recensione, (4)Visualizza Recensioni, (5)Esci:");
 				// inizio risposta menu
@@ -88,7 +87,7 @@ public class Main {
 				case "4":
 					if (app.getElencoRecensioni().size() > 0) {
 						System.out.println("Recensioni:");
-						System.out.println(app.getElencoRecensioni()+"\n");	
+						System.out.println(app.getElencoRecensioni() + "\n");
 					} else {
 						throw new Exception("Nessuna recensione presente");
 					}
@@ -103,9 +102,9 @@ public class Main {
 				}// fine scelta menu
 
 			} while (uscita == false);
-			} catch (Exception e) {
-				System.err.println(e.getMessage());
-			}
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
 
 	}// fine main
 
